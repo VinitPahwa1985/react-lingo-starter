@@ -1,0 +1,15 @@
+# Node
+node_modules/
+dist/
+
+# Env (IMPORTANT - contains secrets)
+.env
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Optional (if using ollama/cache later)
+cache/
