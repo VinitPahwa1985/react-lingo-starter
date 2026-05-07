@@ -4,7 +4,8 @@
     "source": "en",
     "targets": [
       "hi",
-      "fr"
+      "fr",
+      "ar"
     ]
   },
   "buckets": {

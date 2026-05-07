@@ -1,5 +1,134 @@
 {
-  "welcome.title": "Bienvenue dans votre application",
-  "cta.get_started": "Commencer",
-  "header.dashboard": "Tableau de bord"
+  "welcome": "Bienvenue sur le Portail d'Archivage",
+  "errorBoundary": {
+    "title": "Une erreur s'est produite",
+    "message": "Une erreur inattendue s'est produite.",
+    "detailsLabel": "Détails de l'erreur",
+    "retryButton": "Réessayer"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "retentionPolicies": "Politiques de conservation (Lecture seule)",
+    "retentionPolicySubHeading": "Politiques de conservation système et par marché",
+    "infoBanner": "Les politiques de conservation sont appliquées au niveau du stockage et ne peuvent pas être modifiées ici",
+    "policyTable": {
+      "systemHeader": "Système",
+      "marketHeader": "Marché",
+      "retentionPeriodHeader": "Période de conservation (années)"
+    },
+    "aboutRetentionPolicyHeader": "À propos des politiques de conservation",
+    "aboutRetentionPolicy": "Les politiques de conservation sont gérées au niveau du stockage Azure Blob Storage et sont immuables. Ces paramètres garantissent la conformité aux réglementations locales sur les marchés MENA. Contactez l'équipe IT Ops ou le Super Administrateur pour toute demande de modification de politique.",
+    "noRetentionData": "Aucune politique de conservation trouvée."
+  },
+  "search": {
+    "headerTitle": "Recherche",
+    "headerDescription": "Rechercher parmi tous les documents de facturation archivés",
+    "invoiceTypeHeading": "Type de facture",
+    "advanceFilterTest": {
+      "title": "Filtre avancé",
+      "subTitle": "Affinez votre recherche avec des détails au niveau des transactions",
+      "invoiceNumberLabel": "Saisissez le(s) numéro(s) de facture",
+      "invoiceNumberHelperText": "Plusieurs valeurs acceptées — séparez-les par des virgules",
+      "marketLabel": "Marchés",
+      "sourceSystemLabel": "Système source",
+      "brandLabel": "Marque",
+      "startDateLabel": "Date de début",
+      "endDateLabel": "Date de fin",
+      "storeIdLabel": "ID du magasin",
+      "cashierIdLabel": "ID du caissier",
+      "bulkBottomLabel": "La disponibilité du téléchargement en masse peut être limitée par la taille des résultats",
+      "marketPlaceholder": "Tous les marchés",
+      "sourceSystemPlaceholder": "Tous les systèmes",
+      "brandPlaceholder": "Toutes les marques",
+      "invoiceNumberPlaceholder": "INV-XXX-XXXX-XXX",
+      "cashierIdPlaceholder": "CASH-XXXXX",
+      "storeIdPlaceholder": "STR-XXX-XXX",
+      "clearButton": "Tout effacer",
+      "searchButton": "Rechercher",
+      "entityLabel": "Entité opérationnelle",
+      "entityNamePlaceholder": "Toutes les entités",
+      "statusLabel": "Statut",
+      "statusNamePlaceholder": "Tous les statuts"
+    },
+    "invoiceTableColumns": {
+      "documentId": "ID du document",
+      "invoice": "Facture n°",
+      "invoiceType": "Type de facture",
+      "system": "Système",
+      "market": "Marché",
+      "brand": "Marque",
+      "storeCashier": "Magasin",
+      "transactionDate": "Date/heure de transaction",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "pagination": {
+      "showingText": "Affichage de {{start}}–{{end}} sur {{total}} factures",
+      "pageSizeLabel": "Taille de la page"
+    }
+  },
+  "dashboard": {
+    "headerTitle": "Archivage mondial des factures – Tableau de bord",
+    "headerDescription": "Surveillance du système en temps réel et informations opérationnelles",
+    "sectionOneHeading": "Critères de filtrage",
+    "sectionOneSubHeading": "Les métriques du tableau de bord sont filtrées par système source, marché et mois/année pour garantir les performances",
+    "documentsBySystem": "Documents par système source",
+    "recentActivity": "Activité récente",
+    "monthLabel": "Mois",
+    "monthPlaceholder": "Sélectionner un mois",
+    "yearLabel": "Année",
+    "yearPlaceholder": "Sélectionner une année",
+    "sourceSystemHeading": "Comptages par système source",
+    "sourceSystemSubHeading": "Filtré selon les critères sélectionnés",
+    "queueStatusHeading": "État de la file d'attente",
+    "queueStatusSubHeading": "Documents en attente par système source",
+    "retentionPolicies": "Les politiques de rétention sont gérées via la configuration et ne peuvent pas être modifiées ici",
+    "ingestionHeading": "Les fichiers illisibles ou partiellement traités sont enregistrés en tant qu'échecs d'ingestion à des fins de surveillance."
+  },
+  "header": {
+    "toggleLanguage": "Français",
+    "logout": "Déconnexion"
+  },
+  "sidebar": {
+    "search": " Récupération des factures",
+    "dashboard": "Tableau de bord",
+    "user-logs": "Journaux utilisateurs",
+    "settings": "Paramètres de conservation",
+    "poweredBy": "Propulsé par Alshaya Group"
+  },
+  "networkError": {
+    "title": "Erreur de connexion réseau",
+    "subtitle": "Nous rencontrons des difficultés pour nous connecter au serveur. Veuillez vérifier votre connexion Internet et réessayer.",
+    "retryButton": "Réessayer la connexion",
+    "goBackButton": "Retour",
+    "errorCodeLabel": "Code d'erreur",
+    "defaultErrorCode": "NET_CONNECTION_FAILED"
+  },
+  "timeoutError": {
+    "title": "Erreur d'expiration",
+    "subtitle": "La requête prend plus de temps que prévu. Veuillez réessayer.",
+    "retryButton": "Réessayer",
+    "goBackButton": "Retour",
+    "errorCodeLabel": "Code d'erreur",
+    "defaultErrorCode": "TIMEOUT_ERROR_408"
+  },
+  "login": {
+    "title": "Connexion au portail des factures",
+    "subtitle": "Alshaya Group - Portail interne",
+    "email": "E-mail",
+    "emailPlaceholder": "Sélectionner un utilisateur démo...",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Entrez votre mot de passe...",
+    "signIn": "Se connecter",
+    "footer": "Des difficultés ? Contactez le service d'assistance informatique.",
+    "incorrectPassword": "Le mot de passe que vous avez saisi est incorrect"
+  },
+  "preview": {
+    "invoice": "Facture",
+    "close": "Fermer",
+    "download": "Télécharger"
+  },
+  "adminPanel": {
+    "headerTitle": "Panneau d'administration"
+  }
 }

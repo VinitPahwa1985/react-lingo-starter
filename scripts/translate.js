@@ -5,7 +5,7 @@ dotenv.config();
 
 try {
   const output = execSync(
-    `npx lingo translate --input i18n-keys.json --locales hi,fr --api-key ${process.env.LINGO_API_KEY}`,
+    `npx lingo translate --input i18n-keys.json --locales hi,fr,ar --api-key ${process.env.LINGO_API_KEY}`,
     { encoding: 'utf-8' }
   );
 

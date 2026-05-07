@@ -13,6 +13,7 @@ function App() {
         <button onClick={() => i18n.changeLanguage('en')}>EN</button>
         <button onClick={() => i18n.changeLanguage('hi')}>HI</button>
         <button onClick={() => i18n.changeLanguage('fr')}>FR</button>
+        <button onClick={() => i18n.changeLanguage('ar')}>AR</button>
       </div>
     </div>
   );

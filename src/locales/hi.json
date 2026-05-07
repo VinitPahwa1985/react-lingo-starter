@@ -1,5 +1,134 @@
 {
-  "welcome.title": "आपके ऐप में आपका स्वागत है",
-  "cta.get_started": "शुरू करें",
-  "header.dashboard": "डैशबोर्ड"
+  "welcome": "Welcome to the Archival Portal",
+  "errorBoundary": {
+    "title": "कुछ गलत हो गया",
+    "message": "एक अप्रत्याशित त्रुटि हुई।",
+    "detailsLabel": "त्रुटि विवरण",
+    "retryButton": "पुनः प्रयास करें"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "retentionPolicies": "रिटेंशन नीतियाँ (केवल पढ़ने योग्य)",
+    "retentionPolicySubHeading": "सिस्टम और बाज़ार-स्तरीय रिटेंशन नीतियाँ",
+    "infoBanner": "रिटेंशन नीतियाँ स्टोरेज स्तर पर लागू होती हैं और यहाँ संपादित नहीं की जा सकतीं",
+    "policyTable": {
+      "systemHeader": "सिस्टम",
+      "marketHeader": "बाज़ार",
+      "retentionPeriodHeader": "रिटेंशन अवधि (वर्ष)"
+    },
+    "aboutRetentionPolicyHeader": "रिटेंशन नीतियों के बारे में",
+    "aboutRetentionPolicy": "रिटेंशन नीतियाँ Azure Blob Storage टियर स्तर पर प्रबंधित की जाती हैं और अपरिवर्तनीय हैं। ये सेटिंग्स MENA बाज़ारों में स्थानीय नियमों के अनुपालन को सुनिश्चित करती हैं। नीति परिवर्तन अनुरोधों के लिए IT Ops या Super Admin से संपर्क करें।",
+    "noRetentionData": "कोई रिटेंशन नीति नहीं मिली।"
+  },
+  "search": {
+    "headerTitle": "खोज",
+    "headerDescription": "सभी संग्रहीत इनवॉइस दस्तावेज़ों में खोजें",
+    "invoiceTypeHeading": "इनवॉइस प्रकार",
+    "advanceFilterTest": {
+      "title": "उन्नत फ़िल्टर",
+      "subTitle": "लेन-देन स्तर के विवरण के साथ अपनी खोज को परिष्कृत करें",
+      "invoiceNumberLabel": "इनवॉइस नंबर दर्ज करें",
+      "invoiceNumberHelperText": "एकाधिक मान समर्थित हैं — अल्पविराम से अलग करें",
+      "marketLabel": "बाज़ार",
+      "sourceSystemLabel": "स्रोत सिस्टम",
+      "brandLabel": "ब्रांड",
+      "startDateLabel": "प्रारंभ तिथि",
+      "endDateLabel": "समाप्ति तिथि",
+      "storeIdLabel": "स्टोर आईडी",
+      "cashierIdLabel": "कैशियर आईडी",
+      "bulkBottomLabel": "बल्क डाउनलोड की उपलब्धता परिणाम आकार द्वारा सीमित हो सकती है",
+      "marketPlaceholder": "सभी बाज़ार",
+      "sourceSystemPlaceholder": "सभी सिस्टम",
+      "brandPlaceholder": "सभी ब्रांड",
+      "invoiceNumberPlaceholder": "INV-XXX-XXXX-XXX",
+      "cashierIdPlaceholder": "CASH-XXXXX",
+      "storeIdPlaceholder": "STR-XXX-XXX",
+      "clearButton": "सब साफ़ करें",
+      "searchButton": "खोजें",
+      "entityLabel": "संचालन इकाई",
+      "entityNamePlaceholder": "सभी इकाइयाँ",
+      "statusLabel": "स्थिति",
+      "statusNamePlaceholder": "सभी स्थितियाँ"
+    },
+    "invoiceTableColumns": {
+      "documentId": "दस्तावेज़ आईडी",
+      "invoice": "इनवॉइस #",
+      "invoiceType": "इनवॉइस प्रकार",
+      "system": "सिस्टम",
+      "market": "बाज़ार",
+      "brand": "ब्रांड",
+      "storeCashier": "स्टोर",
+      "transactionDate": "लेनदेन तिथि/समय",
+      "status": "स्थिति",
+      "actions": "क्रियाएँ"
+    },
+    "pagination": {
+      "showingText": "{{total}} चालानों में से {{start}}–{{end}} दिखाए जा रहे हैं",
+      "pageSizeLabel": "पृष्ठ आकार"
+    }
+  },
+  "dashboard": {
+    "headerTitle": "वैश्विक चालान संग्रह – डैशबोर्ड",
+    "headerDescription": "रियल-टाइम सिस्टम निगरानी और परिचालन अंतर्दृष्टि",
+    "sectionOneHeading": "फ़िल्टर मानदंड",
+    "sectionOneSubHeading": "डैशबोर्ड मेट्रिक्स को प्रदर्शन सुनिश्चित करने के लिए स्रोत प्रणाली, बाज़ार और माह/वर्ष द्वारा फ़िल्टर किया जाता है",
+    "documentsBySystem": "स्रोत प्रणाली के अनुसार दस्तावेज़",
+    "recentActivity": "हालिया गतिविधि",
+    "monthLabel": "माह",
+    "monthPlaceholder": "माह चुनें",
+    "yearLabel": "वर्ष",
+    "yearPlaceholder": "वर्ष चुनें",
+    "sourceSystemHeading": "स्रोत प्रणाली की गणना",
+    "sourceSystemSubHeading": "चयनित मानदंडों द्वारा फ़िल्टर किया गया",
+    "queueStatusHeading": "कतार स्थिति",
+    "queueStatusSubHeading": "स्रोत प्रणाली के अनुसार लंबित दस्तावेज़",
+    "retentionPolicies": "प्रतिधारण नीतियाँ कॉन्फ़िगरेशन के माध्यम से प्रबंधित की जाती हैं और यहाँ संपादित नहीं की जा सकतीं",
+    "ingestionHeading": "अपठनीय या आंशिक रूप से संसाधित फ़ाइलें निगरानी हेतु अंतर्ग्रहण विफलताओं के रूप में दर्ज की जाती हैं।"
+  },
+  "header": {
+    "toggleLanguage": "अंग्रेज़ी",
+    "logout": "लॉगआउट"
+  },
+  "sidebar": {
+    "search": " चालान पुनर्प्राप्ति",
+    "dashboard": "डैशबोर्ड",
+    "user-logs": "उपयोगकर्ता लॉग",
+    "settings": "प्रतिधारण सेटिंग्स",
+    "poweredBy": "Alshaya Group द्वारा संचालित"
+  },
+  "networkError": {
+    "title": "नेटवर्क कनेक्शन त्रुटि",
+    "subtitle": "हमें सर्वर से कनेक्ट करने में समस्या हो रही है। कृपया अपना इंटरनेट कनेक्शन जांचें और पुनः प्रयास करें।",
+    "retryButton": "पुनः कनेक्ट करें",
+    "goBackButton": "वापस जाएं",
+    "errorCodeLabel": "त्रुटि कोड",
+    "defaultErrorCode": "NET_CONNECTION_FAILED"
+  },
+  "timeoutError": {
+    "title": "टाइमआउट त्रुटि",
+    "subtitle": "अनुरोध को अपेक्षा से अधिक समय लग रहा है। कृपया पुनः प्रयास करें।",
+    "retryButton": "पुनः प्रयास करें",
+    "goBackButton": "वापस जाएं",
+    "errorCodeLabel": "त्रुटि कोड",
+    "defaultErrorCode": "TIMEOUT_ERROR_408"
+  },
+  "login": {
+    "title": "Invoice Portal में साइन इन करें",
+    "subtitle": "Alshaya Group - आंतरिक पोर्टल",
+    "email": "ईमेल",
+    "emailPlaceholder": "डेमो उपयोगकर्ता चुनें...",
+    "password": "पासवर्ड",
+    "passwordPlaceholder": "अपना पासवर्ड दर्ज करें...",
+    "signIn": "साइन इन करें",
+    "footer": "कोई समस्या है? IT सेवा डेस्क से संपर्क करें।",
+    "incorrectPassword": "आपने जो पासवर्ड दर्ज किया वह गलत है"
+  },
+  "preview": {
+    "invoice": "चालान",
+    "close": "बंद करें",
+    "download": "डाउनलोड करें"
+  },
+  "adminPanel": {
+    "headerTitle": "एडमिन पैनल"
+  }
 }

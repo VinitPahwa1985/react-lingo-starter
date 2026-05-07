@@ -1,4 +1,4 @@
-# 🌍 React AI Localization Starter
+# 🌍 React Lingo Starter
 
 Build a production-ready React localization pipeline that automates translation and integrates with `react-i18next`.
 
@@ -6,48 +6,389 @@ Build a production-ready React localization pipeline that automates translation 
 
 ---
 
-## Project Overview
+## 📋 What This App Does
 
-This repository demonstrates a complete React + i18next localization workflow with automated translation generation.
+React Lingo Starter is a demonstration application that showcases a complete internationalization (i18n) workflow for React applications. It provides:
 
-The app uses:
+- **Automated Translation Pipeline**: Generate translations for multiple languages automatically using AI-powered translation services
+- **Real-time Language Switching**: Switch between languages in the browser without page reload
+- **Developer-Friendly Workflow**: Write text once in English, generate all translations with a single command
+- **Production-Ready Architecture**: Scalable setup ready for CI/CD integration and multi-language expansion
 
-- `react-i18next` for runtime language switching in the browser
-- `src/locales/en.json` as the source-of-truth English copy
-- generated target files in `src/locales/hi.json` and `src/locales/fr.json`
-- a translation orchestration layer based on `lingo.dev` CLI
-- convenient npm scripts for development, translation, and build
+### 🎯 Core Functionality
 
-### What problem does it solve?
-
-Manual localization is slow, brittle, and hard to keep in sync across languages.
-
-This project replaces repetitive copy/paste and spreadsheet workflows with an automated translation pipeline, so developers can:
-
-- author text once in English
-- generate translated JSON assets automatically
-- switch languages in the React UI without manual file edits
+The app demonstrates a modern invoice archival portal with:
+- Welcome screen with translated content
+- Language switching buttons (English, Hindi, French, Arabic)
+- Comprehensive translation coverage for UI elements
+- Error handling and user feedback in multiple languages
 
 ---
 
-## Key Features
+## 🏗️ How It Works
 
-- **Automated translation pipeline** via `npm run i18n`
-- **React + i18next integration** for simple `t('key')` lookups
-- **Source-of-truth JSON** model with separate locale output files
-- **Scalable architecture** ready for CI/CD and multi-language expansion
-- **Translation discovery & injection** configured through `i18n.json`
-
----
-
-## Architecture
-
-A high-level view of the localization flow:
+### Architecture Overview
 
 ```mermaid
 flowchart LR
-  "React App" --> "i18next"
-  "i18next" --> "src/locales/en.json"
+    A[Developer writes English text] --> B[i18n-keys.json]
+    B --> C[Lingo.dev CLI]
+    C --> D[AI Translation Service]
+    D --> E[Generated locale files]
+    E --> F[React App with i18next]
+    F --> G[Translated UI]
+```
+
+### Key Components
+
+#### 1. **Source of Truth** (`src/locales/en.json`)
+The English translation file serves as the single source of truth for all text content. All UI strings, error messages, and labels are defined here first.
+
+#### 2. **Translation Configuration** (`i18n.json`)
+Configures the Lingo.dev translation pipeline:
+- Source language: English (`en`)
+- Target languages: Hindi (`hi`), French (`fr`), Arabic (`ar`)
+- File patterns for translation discovery
+
+#### 3. **React Integration** (`src/i18n.ts`)
+Sets up `react-i18next` with:
+- Language resources loaded from JSON files
+- Default language set to English
+- Fallback language handling
+
+#### 4. **Translation Pipeline** (`scripts/translate.js`)
+Node.js script that:
+- Executes Lingo.dev CLI commands
+- Handles API authentication via environment variables
+- Processes translation requests for multiple languages
+
+### Translation Flow
+
+1. **Development Phase**:
+   - Developer adds new text keys to `src/locales/en.json`
+   - Runs `npm run i18n` to generate translations
+   - Lingo.dev processes the content and creates target language files
+
+2. **Runtime Phase**:
+   - React app loads with `react-i18next` initialized
+   - User clicks language buttons to switch locales
+   - UI re-renders with selected language translations
+   - Changes persist for the current session
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** 18.0 or higher
+- **npm** or **yarn** package manager
+- **Lingo.dev API Key** (for translation generation)
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd react-lingo-starter
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**:
+   ```bash
+   cp .env.example .env
+   # Add your LINGO_API_KEY to .env file
+   ```
+
+4. **Generate translations** (optional - translations are pre-generated):
+   ```bash
+   npm run i18n
+   ```
+
+5. **Start development server**:
+   ```bash
+   npm run dev
+   ```
+
+The app will be available at `http://localhost:5173`
+
+---
+
+## 📖 Usage
+
+### Basic Language Switching
+
+1. Open the app in your browser
+2. View the welcome message in English (default)
+3. Click language buttons to switch:
+   - **EN**: English
+   - **HI**: Hindi (हिंदी)
+   - **FR**: French (Français)
+   - **AR**: Arabic (العربية)
+
+### Development Workflow
+
+#### Adding New Text
+
+1. **Add English text** to `src/locales/en.json`:
+   ```json
+   {
+     "newFeature": {
+       "title": "New Feature",
+       "description": "This is a new feature description"
+     }
+   }
+   ```
+
+2. **Generate translations**:
+   ```bash
+   npm run i18n
+   ```
+
+3. **Use in React components**:
+   ```tsx
+   import { useTranslation } from 'react-i18next';
+
+   function MyComponent() {
+     const { t } = useTranslation();
+
+     return (
+       <div>
+         <h1>{t('newFeature.title')}</h1>
+         <p>{t('newFeature.description')}</p>
+       </div>
+     );
+   }
+   ```
+
+#### Testing Translations
+
+- All translations are automatically generated when running `npm run dev`
+- The build process includes translation generation
+- Manual translation updates can be triggered with `npm run i18n`
+
+---
+
+## ⚙️ Configuration
+
+### Translation Settings (`i18n.json`)
+
+```json
+{
+  "version": "1.15",
+  "locale": {
+    "source": "en",
+    "targets": ["hi", "fr", "ar"]
+  },
+  "buckets": {
+    "json": {
+      "include": ["src/locales/[locale].json"]
+    }
+  }
+}
+```
+
+- **source**: Primary language for content authoring
+- **targets**: Languages to generate translations for
+- **buckets**: File patterns for translation processing
+
+### Environment Variables (`.env`)
+
+```bash
+LINGO_API_KEY=your_lingo_api_key_here
+```
+
+Required for accessing Lingo.dev translation services.
+
+### React i18next Configuration (`src/i18n.ts`)
+
+```typescript
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: en },
+    hi: { translation: hi },
+    fr: { translation: fr },
+    ar: { translation: ar }
+  },
+  lng: 'en',           // Default language
+  fallbackLng: 'en',   // Fallback if translation missing
+  interpolation: { escapeValue: false }
+});
+```
+
+---
+
+## 🌐 Adding New Languages
+
+### 1. Update Translation Configuration
+
+Add new language to `i18n.json`:
+
+```json
+{
+  "locale": {
+    "source": "en",
+    "targets": ["hi", "fr", "ar", "es", "de"]
+  }
+}
+```
+
+### 2. Update React Configuration
+
+Add new language import and resource in `src/i18n.ts`:
+
+```typescript
+import es from './locales/es.json';
+import de from './locales/de.json';
+
+// Add to resources object:
+es: { translation: es },
+de: { translation: de }
+```
+
+### 3. Add Language Button
+
+Update `src/App.tsx` to include new language buttons:
+
+```tsx
+<button onClick={() => i18n.changeLanguage('es')}>ES</button>
+<button onClick={() => i18n.changeLanguage('de')}>DE</button>
+```
+
+### 4. Generate Translations
+
+```bash
+npm run i18n
+```
+
+---
+
+## 🔧 Development Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with translations |
+| `npm run build` | Build for production |
+| `npm run i18n` | Generate/update translations |
+| `npm run docs:dev` | Start documentation server |
+| `npm run docs:build` | Build documentation |
+| `npm run docs:screenshots` | Capture documentation screenshots |
+
+### Translation Pipeline Details
+
+The `npm run i18n` script executes:
+1. Extracts translatable strings from `src/locales/en.json`
+2. Sends content to Lingo.dev API for translation
+3. Generates/updates target language files
+4. Maintains translation quality and consistency
+
+---
+
+## 📁 Project Structure
+
+```
+react-lingo-starter/
+├── src/
+│   ├── locales/           # Translation files
+│   │   ├── en.json       # Source English translations
+│   │   ├── hi.json       # Hindi translations
+│   │   ├── fr.json       # French translations
+│   │   └── ar.json       # Arabic translations
+│   ├── i18n.ts           # i18next configuration
+│   ├── App.tsx           # Main React component
+│   └── main.tsx          # App entry point
+├── scripts/
+│   └── translate.js      # Translation pipeline script
+├── docs/                 # Documentation site
+├── i18n.json            # Lingo.dev configuration
+├── package.json         # Dependencies and scripts
+└── README.md            # This file
+```
+
+---
+
+## 🔄 Translation Workflow
+
+### Automated Pipeline
+
+```mermaid
+sequenceDiagram
+    participant Dev as Developer
+    participant JSON as en.json
+    participant Script as translate.js
+    participant Lingo as Lingo.dev API
+    participant Files as Locale Files
+    participant App as React App
+
+    Dev->>JSON: Add English text
+    Dev->>Script: Run npm run i18n
+    Script->>Lingo: Send translation request
+    Lingo->>Files: Generate translations
+    Files->>App: Load translated content
+    App->>Dev: Display translated UI
+```
+
+### Quality Assurance
+
+- **Source Control**: English text maintained in version control
+- **Automated Generation**: Consistent translation updates
+- **Fallback Handling**: Graceful degradation if translations missing
+- **Build Integration**: Translations generated during development/build
+
+---
+
+## 🚀 Deployment
+
+### Production Build
+
+```bash
+npm run build
+```
+
+This creates an optimized production build with all translations included.
+
+### CI/CD Integration
+
+The translation pipeline can be integrated into CI/CD:
+
+```yaml
+# Example GitHub Actions workflow
+- name: Generate Translations
+  run: npm run i18n
+  env:
+    LINGO_API_KEY: ${{ secrets.LINGO_API_KEY }}
+
+- name: Build Application
+  run: npm run build
+```
+
+---
+
+## 🤝 Contributing
+
+1. **Add English text** to `src/locales/en.json`
+2. **Test translations** with `npm run i18n`
+3. **Update React components** to use new translation keys
+4. **Test language switching** in the browser
+5. **Submit pull request** with changes
+
+---
+
+## 📚 Learn More
+
+- [react-i18next Documentation](https://react.i18next.com/)
+- [Lingo.dev Platform](https://lingo.dev/)
+- [i18next Ecosystem](https://www.i18next.com/)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
   "src/locales/en.json" --> "Translation script"
   "Translation script" --> "Lingo.dev CLI / Ollama"
   "Lingo.dev CLI / Ollama" --> "src/locales/hi.json / fr.json"

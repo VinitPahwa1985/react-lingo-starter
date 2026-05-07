@@ -1,5 +1,134 @@
 {
-  "welcome.title": "Welcome to your app",
-  "cta.get_started": "Get Started",
-  "header.dashboard": "Dashboard"
+  "welcome": "Welcome to the Archival Portal",
+  "errorBoundary": {
+    "title": "Something went wrong",
+    "message": "An unexpected error occurred.",
+    "detailsLabel": "Error details",
+    "retryButton": "Try again"
+  },
+  "settings": {
+    "title": "Settings",
+    "retentionPolicies": "Retention Policies (Read-Only)",
+    "retentionPolicySubHeading": "System and market-level retention policies",
+    "infoBanner": "Retention policies are enforced at storage level and cannot be edited here",
+    "policyTable": {
+      "systemHeader": "System",
+      "marketHeader": "Market",
+      "retentionPeriodHeader": "Retention Period (Years)"
+    },
+    "aboutRetentionPolicyHeader": "About Retention Policies",
+    "aboutRetentionPolicy": "Retention policies are managed at the Azure Blob Storage tier level and are immutable. These settings ensure compliance with local regulations across MENA markets. Contact IT Ops or Super Admin for policy change requests.",
+    "noRetentionData": "No retention policies found."
+  },
+  "search": {
+    "headerTitle": "Search",
+    "headerDescription": "Search across all archived invoice documents",
+    "invoiceTypeHeading": "Invoice Type",
+    "advanceFilterTest": {
+      "title": "Advance Filter",
+      "subTitle": "Refine your search with transaction-level details",
+      "invoiceNumberLabel": "Enter invoice number(s)",
+      "invoiceNumberHelperText":"Multiple values supported — separate with commas",
+      "marketLabel": "Markets",
+      "sourceSystemLabel": "Source System",
+      "brandLabel": "Brand",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "storeIdLabel": "Store ID",
+      "cashierIdLabel": "Cashier ID",
+      "bulkBottomLabel": "Bulk download availability may be limited by result size",
+      "marketPlaceholder": "All markets",
+      "sourceSystemPlaceholder": "All systems",
+      "brandPlaceholder": "All brands",
+      "invoiceNumberPlaceholder": "INV-XXX-XXXX-XXX",
+      "cashierIdPlaceholder": "CASH-XXXXX",
+      "storeIdPlaceholder": "STR-XXX-XXX",
+      "clearButton": "Clear All",
+      "searchButton": "Search",
+      "entityLabel":"Operating Entity",
+      "entityNamePlaceholder":"All Entities",
+      "statusLabel":"Status",
+      "statusNamePlaceholder":"All Status"
+    },
+    "invoiceTableColumns": {
+      "documentId": "Document ID",
+      "invoice": "Invoice #",
+      "invoiceType": "Invoice Type",
+      "system": "System",
+      "market": "Market",
+      "brand": "Brand",
+      "storeCashier": "Store",
+      "transactionDate": "Txn Date/Time",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "pagination": {
+      "showingText": "Showing {{start}}–{{end}} of {{total}} invoices",
+      "pageSizeLabel": "Page Size"
+    }
+  },
+  "dashboard": {
+    "headerTitle": "Global Invoice Archival – Dashboard",
+    "headerDescription": "Real-time system monitoring and operational insights",
+    "sectionOneHeading": "Filter Criteria",
+    "sectionOneSubHeading": "Dashboard metrics are filtered by Source System, Market, and Month/Year to ensure performance",
+    "documentsBySystem": "Documents by Source System",
+    "recentActivity": "Recent Activity",
+    "monthLabel": "Month",
+    "monthPlaceholder": "Select Month",
+    "yearLabel": "Year",
+    "yearPlaceholder": "Select Year",
+    "sourceSystemHeading": "Source System Counts",
+    "sourceSystemSubHeading": "Filtered by selected criteria",
+    "queueStatusHeading": "Queue Status",
+    "queueStatusSubHeading": "Pending documents by source system",
+    "retentionPolicies": "Retention policies are managed via configuration and cannot be edited here",
+    "ingestionHeading" : "Unreadable or partially processed files are captured as ingestion failures for monitoring."
+  },
+  "header": {
+    "toggleLanguage": "English",
+    "logout": "Logout"
+  },
+  "sidebar": {
+    "search": " Invoice Retrieval",
+    "dashboard": "Dashboard",
+    "user-logs": "User Logs",
+    "settings": "Retention Settings",
+    "poweredBy": "Powered by Alshaya Group"
+  },
+  "networkError": {
+    "title": "Network Connection Error",
+    "subtitle": "We're having trouble connecting to the server. Please check your internet connection and try again.",
+    "retryButton": "Retry Connection",
+    "goBackButton": "Go Back",
+    "errorCodeLabel": "Error Code",
+    "defaultErrorCode": "NET_CONNECTION_FAILED"
+  },
+  "timeoutError": {
+    "title": "Timeout Error",
+    "subtitle": "The request is taking longer than expected. Please try again.",
+    "retryButton": "Try Again",
+    "goBackButton": "Go Back",
+    "errorCodeLabel": "Error Code",
+    "defaultErrorCode": "TIMEOUT_ERROR_408"
+  },
+  "login": {
+    "title": "Sign in to Invoice Portal",
+    "subtitle": "Alshaya Group - Internal Portal",
+    "email": "Email",
+    "emailPlaceholder": "Select demo user...",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password...",
+    "signIn": "Sign in",
+    "footer": "Having trouble? Contact IT Service Desk.",
+    "incorrectPassword": "The Password you entered is incorrect"
+  },
+  "preview" : {
+    "invoice": "Invoice",
+    "close": "Close",
+    "download": "Download"
+  },
+  "adminPanel":{
+    "headerTitle": "Admin Panel"
+  }
 }

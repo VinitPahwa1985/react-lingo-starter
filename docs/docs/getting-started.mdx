@@ -1,0 +1,159 @@
+---
+title: Getting Started
+description: Set up and run the React Lingo Starter application
+sidebar_position: 1
+---
+
+# 🚀 Getting Started
+
+Get started with React Lingo Starter - a complete React internationalization workflow with automated translation generation.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** 18.0 or higher ([Download here](https://nodejs.org/))
+- **npm** or **yarn** package manager
+- **Git** for version control
+- **Lingo.dev API Key** (for translation generation)
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-org/react-lingo-starter.git
+cd react-lingo-starter
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+This will install all necessary dependencies including React, i18next, and development tools.
+
+### 3. Environment Setup
+
+Create a `.env` file in the root directory:
+
+```bash
+cp .env.example .env
+```
+
+Add your Lingo.dev API key to the `.env` file:
+
+```bash
+LINGO_API_KEY=your_lingo_api_key_here
+```
+
+:::info Getting a Lingo.dev API Key
+Visit [lingo.dev](https://lingo.dev) to sign up and get your API key for automated translations.
+:::
+
+### 4. Generate Translations (Optional)
+
+Translations are pre-generated, but you can regenerate them:
+
+```bash
+npm run i18n
+```
+
+This command will:
+- Extract translatable strings from `src/locales/en.json`
+- Send them to Lingo.dev for translation
+- Generate locale files for Hindi, French, and Arabic
+
+### 5. Start Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## 🎯 Quick Start
+
+Once running, you can:
+
+1. **View the app** in your browser at `http://localhost:5173`
+2. **Switch languages** using the buttons: EN, HI, FR, AR
+3. **See translations** update in real-time
+4. **Modify text** in `src/locales/en.json` and regenerate translations
+
+## Project Structure
+
+After installation, your project will have this structure:
+
+```
+react-lingo-starter/
+├── src/
+│   ├── locales/           # Translation files
+│   │   ├── en.json       # English (source)
+│   │   ├── hi.json       # Hindi
+│   │   ├── fr.json       # French
+│   │   └── ar.json       # Arabic
+│   ├── i18n.ts           # i18next configuration
+│   ├── App.tsx           # Main component
+│   └── main.tsx          # App entry point
+├── scripts/
+│   └── translate.js      # Translation pipeline
+├── docs/                 # Documentation
+├── i18n.json            # Lingo.dev config
+├── package.json         # Dependencies
+└── README.md            # This documentation
+```
+
+## Next Steps
+
+- [Learn How It Works](./how-it-works) - Understand the architecture
+- [Language Switching](./language-switching) - See the translation system in action
+- [Contributing Guide](./contributing) - Help improve the project
+
+## Troubleshooting
+
+### Build Errors
+
+If you encounter build errors:
+
+```bash
+# Clear node modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Translation Issues
+
+If translations aren't generating:
+
+1. Check your `LINGO_API_KEY` in `.env`
+2. Verify your internet connection
+3. Run `npm run i18n` manually
+
+### Port Already in Use
+
+If port 5173 is busy:
+
+```bash
+# Kill process on port 5173
+npx kill-port 5173
+# Or run on different port
+npm run dev -- --port 3000
+```
+
+## Development Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run i18n` | Generate translations |
+| `npm run docs:dev` | Start documentation server |
+| `npm run docs:build` | Build documentation |
+
+## Need Help?
+
+- 📖 [Full Documentation](./how-it-works)
+- 🐛 [Report Issues](https://github.com/your-org/react-lingo-starter/issues)
+- 💬 [Discussions](https://github.com/your-org/react-lingo-starter/discussions)

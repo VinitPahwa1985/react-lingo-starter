@@ -1,0 +1,134 @@
+{
+  "welcome": "مرحبًا بك في بوابة الأرشيف",
+  "errorBoundary": {
+    "title": "حدث خطأ ما",
+    "message": "حدث خطأ غير متوقع.",
+    "detailsLabel": "تفاصيل الخطأ",
+    "retryButton": "حاول مجدداً"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "retentionPolicies": "سياسات الاحتفاظ (للقراءة فقط)",
+    "retentionPolicySubHeading": "سياسات الاحتفاظ على مستوى النظام والسوق",
+    "infoBanner": "يتم تطبيق سياسات الاحتفاظ على مستوى التخزين ولا يمكن تعديلها هنا",
+    "policyTable": {
+      "systemHeader": "النظام",
+      "marketHeader": "السوق",
+      "retentionPeriodHeader": "فترة الاحتفاظ (بالسنوات)"
+    },
+    "aboutRetentionPolicyHeader": "حول سياسات الاحتفاظ",
+    "aboutRetentionPolicy": "تُدار سياسات الاحتفاظ على مستوى طبقة Azure Blob Storage وهي غير قابلة للتغيير. تضمن هذه الإعدادات الامتثال للوائح المحلية في أسواق منطقة الشرق الأوسط وشمال أفريقيا. تواصل مع فريق عمليات تقنية المعلومات أو المشرف العام لطلبات تغيير السياسات.",
+    "noRetentionData": "لم يتم العثور على سياسات احتفاظ."
+  },
+  "search": {
+    "headerTitle": "البحث",
+    "headerDescription": "البحث في جميع مستندات الفواتير المؤرشفة",
+    "invoiceTypeHeading": "نوع الفاتورة",
+    "advanceFilterTest": {
+      "title": "فلتر متقدم",
+      "subTitle": "دقّق بحثك باستخدام تفاصيل مستوى المعاملات",
+      "invoiceNumberLabel": "أدخل رقم (أرقام) الفاتورة",
+      "invoiceNumberHelperText": "يدعم إدخال قيم متعددة — افصل بينها بفواصل",
+      "marketLabel": "الأسواق",
+      "sourceSystemLabel": "النظام المصدر",
+      "brandLabel": "العلامة التجارية",
+      "startDateLabel": "تاريخ البداية",
+      "endDateLabel": "تاريخ الانتهاء",
+      "storeIdLabel": "معرّف المتجر",
+      "cashierIdLabel": "معرّف أمين الصندوق",
+      "bulkBottomLabel": "قد يكون توفر التنزيل الجماعي محدودًا بحجم النتائج",
+      "marketPlaceholder": "جميع الأسواق",
+      "sourceSystemPlaceholder": "جميع الأنظمة",
+      "brandPlaceholder": "جميع العلامات التجارية",
+      "invoiceNumberPlaceholder": "INV-XXX-XXXX-XXX",
+      "cashierIdPlaceholder": "CASH-XXXXX",
+      "storeIdPlaceholder": "STR-XXX-XXX",
+      "clearButton": "مسح الكل",
+      "searchButton": "بحث",
+      "entityLabel": "الكيان التشغيلي",
+      "entityNamePlaceholder": "جميع الكيانات",
+      "statusLabel": "الحالة",
+      "statusNamePlaceholder": "جميع الحالات"
+    },
+    "invoiceTableColumns": {
+      "documentId": "معرّف المستند",
+      "invoice": "رقم الفاتورة",
+      "invoiceType": "نوع الفاتورة",
+      "system": "النظام",
+      "market": "السوق",
+      "brand": "العلامة التجارية",
+      "storeCashier": "المتجر",
+      "transactionDate": "تاريخ/وقت المعاملة",
+      "status": "الحالة",
+      "actions": "الإجراءات"
+    },
+    "pagination": {
+      "showingText": "عرض {{start}}–{{end}} من أصل {{total}} فاتورة",
+      "pageSizeLabel": "حجم الصفحة"
+    }
+  },
+  "dashboard": {
+    "headerTitle": "أرشفة الفواتير العالمية – لوحة التحكم",
+    "headerDescription": "مراقبة النظام في الوقت الفعلي ورؤى تشغيلية",
+    "sectionOneHeading": "معايير التصفية",
+    "sectionOneSubHeading": "يتم تصفية مقاييس لوحة التحكم حسب نظام المصدر والسوق والشهر/السنة لضمان الأداء",
+    "documentsBySystem": "المستندات حسب نظام المصدر",
+    "recentActivity": "النشاط الأخير",
+    "monthLabel": "الشهر",
+    "monthPlaceholder": "اختر الشهر",
+    "yearLabel": "السنة",
+    "yearPlaceholder": "اختر السنة",
+    "sourceSystemHeading": "أعداد نظام المصدر",
+    "sourceSystemSubHeading": "مصفّاة وفق المعايير المحددة",
+    "queueStatusHeading": "حالة قائمة الانتظار",
+    "queueStatusSubHeading": "المستندات المعلّقة حسب نظام المصدر",
+    "retentionPolicies": "تتم إدارة سياسات الاحتفاظ عبر الإعدادات ولا يمكن تعديلها هنا",
+    "ingestionHeading": "يتم التقاط الملفات غير القابلة للقراءة أو المعالجة جزئياً كإخفاقات استيعاب للمراقبة."
+  },
+  "header": {
+    "toggleLanguage": "العربية",
+    "logout": "تسجيل الخروج"
+  },
+  "sidebar": {
+    "search": "استرداد الفواتير",
+    "dashboard": "لوحة التحكم",
+    "user-logs": "سجلات المستخدمين",
+    "settings": "إعدادات الاحتفاظ",
+    "poweredBy": "مدعوم من مجموعة الشايع"
+  },
+  "networkError": {
+    "title": "خطأ في الاتصال بالشبكة",
+    "subtitle": "نواجه مشكلة في الاتصال بالخادم. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
+    "retryButton": "إعادة الاتصال",
+    "goBackButton": "العودة",
+    "errorCodeLabel": "رمز الخطأ",
+    "defaultErrorCode": "NET_CONNECTION_FAILED"
+  },
+  "timeoutError": {
+    "title": "خطأ انتهاء المهلة",
+    "subtitle": "الطلب يستغرق وقتاً أطول من المتوقع. يرجى المحاولة مرة أخرى.",
+    "retryButton": "حاول مرة أخرى",
+    "goBackButton": "العودة",
+    "errorCodeLabel": "رمز الخطأ",
+    "defaultErrorCode": "TIMEOUT_ERROR_408"
+  },
+  "login": {
+    "title": "تسجيل الدخول إلى بوابة الفواتير",
+    "subtitle": "مجموعة الشايع - البوابة الداخلية",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "اختر مستخدماً تجريبياً...",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "أدخل كلمة المرور...",
+    "signIn": "تسجيل الدخول",
+    "footer": "هل تواجه مشكلة؟ تواصل مع مكتب خدمة تقنية المعلومات.",
+    "incorrectPassword": "كلمة المرور التي أدخلتها غير صحيحة"
+  },
+  "preview": {
+    "invoice": "فاتورة",
+    "close": "إغلاق",
+    "download": "تنزيل"
+  },
+  "adminPanel": {
+    "headerTitle": "لوحة الإدارة"
+  }
+}
